@@ -6,13 +6,19 @@ export default class SearchBar extends Component {
 
     this.state = {term: '' }
   }
+
+  onInputChange(event){
+    console.log(event.target.value);
+    this.setState({term: event.target.value})
+  }
   render(){
     return (
       <form className="input-group">
         <input
           placeholder="Get a five day forecast in your favrite cities"
           className="form-control"
-          value={}
+          value={this.state.term}
+          onChange={this.onInputChange}
           />
         <span className="input-group-button">
           <button type="submit" className="btn btn-secondary">submit</button>
