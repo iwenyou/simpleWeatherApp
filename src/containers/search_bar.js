@@ -16,7 +16,7 @@ export default class SearchBar extends Component {
   onFormSubmit(event){
     event.preventDefault();
   }
-  
+
   render(){
     return (
       <form onSubmit={this.onFormSubmit} className="input-group">
@@ -24,7 +24,6 @@ export default class SearchBar extends Component {
           placeholder="Get a five day forecast in your favrite cities"
           className="form-control"
           value={this.state.term}
-          onChange={this.onInputChange}
           />
         <span className="input-group-btn">
           <button type="submit" className="btn btn-secondary">submit</button>
