@@ -14,7 +14,10 @@ export default class SearchBar extends Component {
   }
 
   onFormSubmit(event){
+    //always prevent default when using form tag!
     event.preventDefault();
+
+    //We need to go and fetch weather data
   }
 
   render(){
@@ -24,6 +27,7 @@ export default class SearchBar extends Component {
           placeholder="Get a five day forecast in your favrite cities"
           className="form-control"
           value={this.state.term}
+          onChange={this.onInputChange}
           />
         <span className="input-group-btn">
           <button type="submit" className="btn btn-secondary">submit</button>
